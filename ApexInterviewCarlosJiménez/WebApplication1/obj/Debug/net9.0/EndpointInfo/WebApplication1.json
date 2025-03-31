@@ -1,0 +1,402 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WebApplication1",
+    "version": "1.0"
+  },
+  "paths": {
+    "/answers/getAllAnswers": {
+      "get": {
+        "tags": [
+          "Answer"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Answer"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Answer"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Answer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/answers/createAnswer": {
+      "post": {
+        "tags": [
+          "Answer"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Answer"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Answer"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Answer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Answer"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Answer"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Answer"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/answers/getAllAnswersToQuestion/{questionId}": {
+      "get": {
+        "tags": [
+          "Answer"
+        ],
+        "parameters": [
+          {
+            "name": "questionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Answer"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Answer"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Answer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/answers/deleteAllAnswers": {
+      "delete": {
+        "tags": [
+          "Answer"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/questions/getAllQuestions": {
+      "get": {
+        "tags": [
+          "Question"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/questions/getAllMultipleChoiceQuestions": {
+      "get": {
+        "tags": [
+          "Question"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/questions/createMultipleChoiceQuestion": {
+      "post": {
+        "tags": [
+          "Question"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MultipleChoiceQuestion"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MultipleChoiceQuestion"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MultipleChoiceQuestion"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/questions/getAllGradeQuestions": {
+      "get": {
+        "tags": [
+          "Question"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/questions/createGradeQuestion": {
+      "post": {
+        "tags": [
+          "Question"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GradeQuestion"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GradeQuestion"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GradeQuestion"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/questions/deleteAllQuestions": {
+      "delete": {
+        "tags": [
+          "Question"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/questionnaire/{questionnaireId}/answers": {
+      "get": {
+        "tags": [
+          "Questionnaire"
+        ],
+        "parameters": [
+          {
+            "name": "questionnaireId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AnswerDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AnswerDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AnswerDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Answer": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "answerIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionnaireIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "answer": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AnswerDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "answerText": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GradeQuestion": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "maxGrade": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minGrade": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MultipleChoiceQuestion": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "answers": {
+            "type": "string",
+            "nullable": true
+          },
+          "answerList": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

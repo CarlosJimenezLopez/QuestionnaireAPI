@@ -1,0 +1,23 @@
+El proyecto consiste en un mvp de una API que trata de simular un cuestionario.
+
+En este fichero se pretende explicar el funcionamiento y creacion del mismo. Para ello, es importante comenzar diciendo que
+se distinguen tres clases principales. Nótese el diagrama desarrollado en el archivo ClassDiagram.png. Las decisiones tomadas se deben a que se considera 
+la entidad Answer la más importante. Por ello, se trata de ubicar como la clase sobre la que gira el proyecto. La razón de esto es las posibles consultas que se imaginan
+cuando hablamos de un cuestionario. Por ejemplo, puede ser interesante conocer todas las respuestas dadas para una misma pregunta o la media de las calificaciones dada en una encuesta. 
+Debido a esto, la importancia radica en las respuestas de los usuarios. De este modo, cada respuesta tiene un indice de pregunta y un un indice de cuestionario. 
+Esto se debe a que una misma pregunta podría aparecer en un distintos cuestionarios y a la vez una misma pregunta puede tener distintas respuestas. Cabe destacar 
+también las distintas las comprobaciones necesarias al desarrollar los distintos controllers, desde problemas de la base de datos controlados con los distintos try cath hasta 
+las comprobaciones necesarias de los datos introducidos. 
+
+Es importante destacar también el uso de polimorfismo en el desarrollo de la clase Question. Debido a la variedad pedida en el tipo de preguntas, se ha generado una clase abstracta
+que engolba los distintos modelos. A partir de ella, se desarrollan las clases MultipleChoiceQuestion y GradeQuestion impementando sus peculiaridades como los atributos necesarios
+o su pertinente implementación del método CheckAnswers.
+
+Por último, se ha pretendido mantener un orden a la hora de crear el proyecto. Para ello, se distinguen dos carpetas principales. Controllers, la cual almacena las calses controladores
+que permiten hacer llamdas a la API. Estas se diferencian en base a si sus peticiones abordan preguntas, respuestas o cuestionarios. Por otro lado, la carpeta Models contiene las clases 
+necesarias para el desarrollo del proyecto. Fuera de estos directorios quedan los ficheros relacionados con el tratado de la base de datos, el fichero principal y la documentación.
+
+
+*La carpeta Migrations contiene las migraciones realizadas para montar la BBDD. En este proceso se ha usado SQL Server, SQL Server Manager Studio, .Net y Swagger. 
+*La base de datos cuenta con datos para comprobar el funcionamiento.
+*Al tratarse de un MVP se dejan fuera del desarrollo algunas funciones interesantes como algunos UPDATES en los controllers o mayor tipo de preguntas. 

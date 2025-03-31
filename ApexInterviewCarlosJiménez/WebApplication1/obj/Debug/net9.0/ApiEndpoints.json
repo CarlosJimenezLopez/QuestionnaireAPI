@@ -1,0 +1,182 @@
+[
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.AnswerController",
+    "Method": "PostAnswer",
+    "RelativePath": "answers/createAnswer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "answer",
+        "Type": "QuestionnaireAPI.Models.Answer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "QuestionnaireAPI.Models.Answer",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.AnswerController",
+    "Method": "DeleteAllQuestions",
+    "RelativePath": "answers/deleteAllAnswers",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.AnswerController",
+    "Method": "GetAllAnswers",
+    "RelativePath": "answers/getAllAnswers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[QuestionnaireAPI.Models.Answer, QuestionnaireAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.AnswerController",
+    "Method": "GetAnswersToQuestion",
+    "RelativePath": "answers/getAllAnswersToQuestion/{questionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "questionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[QuestionnaireAPI.Models.Answer, QuestionnaireAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.QuestionnaireController",
+    "Method": "GetAnswers",
+    "RelativePath": "questionnaire/{questionnaireId}/answers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "questionnaireId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[QuestionnaireAPI.Controllers.AnswerDto, QuestionnaireAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.QuestionController",
+    "Method": "CreateMultipleChoiceQuestion",
+    "RelativePath": "questions/createGradeQuestion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "question",
+        "Type": "QuestionnaireAPI.Models.GradeQuestion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.QuestionController",
+    "Method": "CreateMultipleChoiceQuestion",
+    "RelativePath": "questions/createMultipleChoiceQuestion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "question",
+        "Type": "QuestionnaireAPI.Models.MultipleChoiceQuestion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.QuestionController",
+    "Method": "DeleteAllQuestions",
+    "RelativePath": "questions/deleteAllQuestions",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.QuestionController",
+    "Method": "GetAlGradeQuestions",
+    "RelativePath": "questions/getAllGradeQuestions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.QuestionController",
+    "Method": "GetAllMultipleChoiceQuestions",
+    "RelativePath": "questions/getAllMultipleChoiceQuestions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuestionnaireAPI.Controllers.QuestionController",
+    "Method": "GetQuestions",
+    "RelativePath": "questions/getAllQuestions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
